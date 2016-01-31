@@ -1,0 +1,29 @@
+.profile__devices
+	ul.collapsible(data-collapsible="accordion")
+		li
+			.collapsible-header
+				i.large.material-icons.small 
+					| stay_current_portrait
+				span New Device
+			.collapsible-body
+				form
+					.input-field
+						input(placeholder="Device ID", ng-model="device.UniqueId")
+					.input-field
+						input(placeholder="Device Name", ng-model="device.Name")
+					.input-field.device-type-radio-buttons
+						span Choose device type:
+						div(ng-repeat="item in vm.deviceType")
+							input(name="device", type="radio", id="{{item.id}}", ng-value="{{item.id}}", ng-model="$parent.device.TypeId")  
+							label(for="{{item.id}}") {{item.name}}   
+					br
+					.btn.btn--new-device(ng-click="vm.addDevice(device)") 
+						span  Add device
+		li(ng-repeat="device in vm.userDevices")
+			.collapsible-header
+				span {{device.name}}
+			.collapsible-body
+				p 
+					| <strong>Id:</strong> {{device.uniqueId}} <br>
+					| <strong>Type:</strong> {{device.type.name}} <br>
+					| <strong>User id:</strong> {{device.userId}} <br>

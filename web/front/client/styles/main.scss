@@ -1,0 +1,118 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import 'colors';
+@import "~susy/sass/susy";
+
+
+
+//***************************
+//** SUSY *******************
+//***************************
+
+$susy: (
+	columns: 12,
+	container: 1140px,
+	global-box-sizing: border-box
+	//debug: (image: show) 
+);
+
+
+
+//***************************
+//** BLOCKS *****************
+//***************************
+
+@import './blocks/app';
+@import './blocks/home';
+@import './blocks/login';
+@import './blocks/profile';
+@import './blocks/event-graph';
+@import './blocks/event-other';
+@import './blocks/event-movements';
+@import './blocks/landing';
+@import './blocks/counter';
+
+
+//------------------------------------------------
+
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: $white;
+	padding: 0; 
+	margin: 0;
+	background-color: rgba(170, 165, 165, 0.4);
+	background-image: url("http://www.transparenttextures.com/patterns/diamond-eyes.png");
+}
+
+//*****************************************
+//** MATERIALIZE OVERRIDE *****************
+//*****************************************
+
+.btn {
+	background-color: $red !important;
+}
+.btn-buy {
+	float: right;
+	font-size: 22px;
+	margin: 30px;
+}
+
+.ct-vertical {
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.ct-horizontal{
+	font-size: 16px;
+}
+
+
+select {
+	display: inline !important;
+}
+
+
+//*****************************************
+//** MEDIA QUERY *****************
+//*****************************************
+
+@media only screen and (min-device-pixel-ratio: 2), only screen and(-webkit-min-device-pixel-ratio: 2){
+	#nav-mobile {
+		display: none;
+	}
+	main {
+		padding-left: 0px;
+	}
+	.card {
+		@include gallery(6 of 12);
+		margin: gutter(10);
+		overflow: hidden;
+	}
+
+	nav.top-nav h2 {
+		font-size: 22px;
+	}
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 700px),
+only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 700px),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 700px),
+only screen and (        min-device-pixel-ratio: 2)      and (min-width: 700px),
+only screen and (                min-resolution: 192dpi) and (min-width: 700px),
+only screen and (                min-resolution: 2dppx)  and (min-width: 700px) { 
+	#nav-mobile {
+		display: none;
+	}
+	.wrapper main {
+		padding-left: 0 !important;
+	}
+	.card {
+		@include gallery(6 of 12);
+		margin: gutter(10);
+		overflow: hidden;
+	}
+
+	nav.top-nav h2 {
+		font-size: 22px;
+	}
+}

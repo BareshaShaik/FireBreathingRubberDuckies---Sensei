@@ -1,0 +1,21 @@
+.event-counter {
+	@include container;
+	padding-top: gutter(5);
+	margin-bottom: 350px;
+	.ct-chart {
+		height: 500px;
+	}
+
+	img {
+		margin: 3px;
+	}
+
+	.images {
+		@include span(8 of 12);
+		@include push(2);
+		margin-bottom: 20px;
+		.img {
+			display: inline-block;
+		}
+	}
+}

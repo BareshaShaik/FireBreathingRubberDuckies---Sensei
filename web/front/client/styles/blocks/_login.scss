@@ -1,0 +1,56 @@
+.login {
+	text-align: center;
+	margin-top: 10%;
+	.input-field {
+		@include span(4 of 12);
+		@include push(4);
+	}
+
+	.login__buttons {
+		@include span(4 of 12);
+		@include push(4);
+	}
+
+	.separator {
+		position: relative;
+		height: 34px;
+		text-align: center;
+		background: none;
+
+		.text {
+			display: inline-block;
+		     padding: 8px;
+		     margin: 0;
+		     background-color: #DDDBDB;
+		}
+
+		hr {
+			width: 90%;
+     		margin: -16px auto 10px auto;
+     		border-top: 1px solid #dce0e0;
+		}
+	}
+
+	form {
+		background-color: red;
+	}
+}
+
+.btn--facebook, .btn--google, .btn--submit {
+	width: 100% !important;
+	margin: 0 0 10px 0;
+}
+
+.btn--facebook {
+	background-color: #8b9dc3;
+	&:hover {
+		background-color: darken(#8b9dc3, 10%);
+	}
+}
+
+.btn--google {
+	background-color: #DD4B39;
+	&:hover {
+		background-color: darken(#DD4B39, 10%)
+	}
+}

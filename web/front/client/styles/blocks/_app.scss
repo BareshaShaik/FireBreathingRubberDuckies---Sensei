@@ -1,0 +1,82 @@
+.nav-wrapper {
+     margin-left: 10%;
+     margin-right: 10%;
+}
+
+.fa-2x {
+     font-size: 1.5em !important;
+}
+
+.brand-logo {
+     margin-top: 8px;
+}
+
+.wrapper {
+
+	.landing-nav {
+	    background-color: rgba(0, 0, 0, 0.3)
+	}
+
+	#nav-mobile {
+		left: 0;
+		width: 240px;
+		margin-right: 240px;
+
+		i.material-icons {
+			position: absolute;
+		     top: 10px;
+		     right: 10px;
+		     cursor: pointer;
+		}
+
+		input#search {
+			display: block;
+			font-size: 16px;
+			font-weight: 300;
+			width: 100%;
+			height: 45px;
+			margin: 0;
+			padding: 0 45px 0 15px;
+			border: 0;
+
+		}
+
+		li.logo {
+			text-align: center;
+		     margin-top: 32px;
+		     margin-bottom: 80px;
+
+		     &:hover {
+		     	background-color: transparent;
+		     }
+		}
+
+
+		li.search {
+
+			&:hover {
+		     	background-color: transparent;
+		     }
+
+		     & input:focus {
+		     	box-shadow: none;
+		     }
+		}
+	}
+
+	main {
+		padding-left: 240px;
+	}
+
+	::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+		color: #5C5C5C;
+	}
+	:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	   	color: #5C5C5C;
+	   	opacity:  1;
+	}
+	.input-field input[type=search]:focus {
+		background-color: transparent !important;
+	}
+
+}

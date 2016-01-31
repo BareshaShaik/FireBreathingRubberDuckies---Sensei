@@ -1,0 +1,22 @@
+nav.landing-nav(ng-show="vm.$rootScope.$state.includes('landing')")
+	.nav-wrapper
+		a.brand-logo(ui-sref="home")
+			img(src="media/full.png" width="150px")
+		a.button-collapse(href="", data-activates="mobile-demo")
+			i.material-icons menu
+		ul.right.hide-on-med-and-down
+			li
+				a(ui-sref="home") Events
+			li
+				a(href="", ng-show="vm.logIn", ng-click="vm.logOut()") 
+					i.fa.fa-sign-out.fa-2x(ng-show="vm.logIn") 
+				a(ui-sref="login", ng-show="!vm.logIn") 
+					i.fa.fa-sign-in.fa-2x
+		ul.side-nav#mobile-demo
+			li
+				a(ui-sref="home") Events
+			li
+				a(href="", ng-show="vm.logIn", ng-click="vm.logOut()") 
+					i.fa.fa-sign-out.fa-2x(ng-show="vm.$rootScope.logIn") 
+				a(ui-sref="login", ng-show="!vm.$rootScope.logIn") 
+					i.fa.fa-sign-in.fa-2x

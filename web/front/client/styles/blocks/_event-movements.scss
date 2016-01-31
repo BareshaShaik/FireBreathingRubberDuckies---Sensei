@@ -1,0 +1,8 @@
+.event-movements {
+	@include container;
+	padding-top: gutter(5);
+	margin-bottom: gutter(5);
+	.ct-chart {
+		height: 70vh;
+	}
+}

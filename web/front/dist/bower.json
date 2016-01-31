@@ -1,0 +1,25 @@
+{
+  "name": "dist",
+  "homepage": "https://github.com/dmacan23/HackCambridge-preparation",
+  "authors": [
+    "davinci2015 <dvincija@foi.hr>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "Materialize": "materialize#~0.97.5",
+    "chartist": "~0.9.5",
+    "signalr": "~2.2.0",
+    "vivus": "~0.3.0",
+    "toastr": "~2.1.2"
+  }
+}

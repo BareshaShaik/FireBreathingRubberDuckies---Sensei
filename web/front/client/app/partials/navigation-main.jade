@@ -1,0 +1,23 @@
+ul#nav-mobile.side-nav.fixed.hide-on-med-and(ng-show="!vm.$rootScope.$state.includes('landing')")
+	li.logo
+		a.brand-logo(href="")
+			img(src="./media/logo.png" width="100px")
+	li.search
+		.search-wrapper.card
+			input#search(ng-model="vm.$rootScope.cardQuery", placeholder="Location")
+			i.material-icons search
+	li.bold(ng-class="{active: vm.$rootScope.menuEvent}")
+		a.waves-effect.waves-teal(ui-sref="home") 
+			i.fa.fa-bar-chart.fa-2x
+			|  Events
+	li.bold(ng-class="{active: vm.$rootScope.$state.includes('profile')}")
+		a.waves-effect.waves-teal(ui-sref="profile") 
+			i.fa.fa-user.fa-2x
+			|  Profile
+	li.bold
+		a.waves-effect.waves-teal(ng-click="vm.logOut()", ng-show="vm.$rootScope.logIn") 
+			i.fa.fa-sign-out.fa-2x
+			|  Sign out 
+		a(ui-sref="login", ng-show="!vm.$rootScope.logIn") 
+			i.fa.fa-sign-in.fa-2x
+			|  Sign in

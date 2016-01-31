@@ -1,0 +1,37 @@
+.event-graph {
+	@include container;
+	padding-top: gutter(5);
+	margin-bottom: gutter(5);
+
+	.ct-chart {
+		height: 70vh;
+	}
+	.ct-horizontal{
+		display: none;
+	}
+
+	h5 {
+		margin-right: 20px;
+	}
+}
+nav.top-nav {
+	height: 122px !important;
+	padding: 20px 0 120px 0 !important;
+}
+
+nav.top-nav i.fa-heart{
+	-webkit-animation: pulse 1s infinite alternate ease-in-out;
+	animation: pulse 1s infinite alternate ease-in-out;
+	font-size: 44px;
+}
+
+@-webkit-keyframes pulse {
+  80%{-webkit-transform: scale3d(1,1,1); }
+  90%{-webkit-transform: scale3d(1.2,1.2,1.2); }
+  100%{-webkit-transform: scale3d(1,1,1); }
+}
+@keyframes pulse {
+  80%{transform: scale3d(1,1,1); }
+  90%{transform: scale3d(1.2,1.2,1.2); }
+  100%{transform: scale3d(1,1,1); }
+}

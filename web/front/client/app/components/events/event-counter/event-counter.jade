@@ -1,0 +1,10 @@
+div
+	nav.top-nav
+		.nav-wrapper
+			h2 Student Survey
+	.event-counter
+		.images
+			div.img(ng-repeat="i in vm.getNumber() track by $index")
+				img(src="./media/counter.png" width="30px")
+		.ct-chart
+	

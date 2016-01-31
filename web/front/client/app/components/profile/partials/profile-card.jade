@@ -1,0 +1,10 @@
+.profile__card
+	.card.hoverable.small
+		.card-image
+			img(ng-src="{{vm.userInfo.cover}}", width="100%")
+			span.card-title {{vm.userInfo.userName}}
+		.card-content
+			p 
+				| <strong>Email: </strong>{{vm.userInfo.email}} <br>
+				| <strong>User ID: </strong>{{vm.userInfo.id}} <br>
+				| <strong> <h5 class="right-align">My account: {{vm.userInfo.money}}  <i class="fa fa-gbp"></i> </h5>

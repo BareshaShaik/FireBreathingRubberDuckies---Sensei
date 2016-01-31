@@ -1,0 +1,46 @@
+.profile__events
+	.card(ng-repeat="event in vm.myEvents")
+		div(ng-show="!event.isEmpty")
+			div(ng-show="event.templateId == 1")
+				a(ui-sref="event-map( {id: {{event.id}} } )")
+					.card-image.waves-effect.waves-block.waves-light
+						img(src="http://i.istockimg.com/file_thumbview_approve/59137114/6/stock-photo-59137114-dublin-pinned-on-a-map-of-europe.jpg")
+				.card-content
+					span.card-title {{event.name}}
+					p.grey-text Event ID: {{event.id}}
+					.tags
+						.chip(ng-repeat="tag in event.tags")
+							| {{tag.name}}
+			div(ng-show="event.templateId == 2")
+				a(ui-sref="event-graph( {id: {{event.id}} } )" ng-show="event.templateId == 2")
+					.card-image.waves-effect.waves-block.waves-light
+						img(src="http://i.istockimg.com/file_thumbview_approve/56644040/6/stock-photo-56644040-touch-screen-financial-symbols.jpg")
+				.card-content
+					span.card-title {{event.name}}
+					p.grey-text Event ID: {{event.id}}
+					.tags
+						.chip(ng-repeat="tag in event.tags")
+							| {{tag.name}}
+
+			div(ng-show="event.templateId == 3")
+				a(ui-sref="event-other( {id: {{event.id}} } )" ng-show="event.templateId == 3")
+					.card-image.waves-effect.waves-block.waves-light
+						img(src="http://i.istockimg.com/file_thumbview_approve/56644040/6/stock-photo-56644040-touch-screen-financial-symbols.jpg")
+				.card-content
+					span.card-title {{event.name}}
+					p.grey-text Event ID: {{event.id}}
+					.tags
+						.chip(ng-repeat="tag in event.tags")
+							| {{tag.name}}
+		//- if event is empty disable it
+		div(ng-show="event.isEmpty")
+			div
+				.card-image.waves-effect.waves-block.waves-light.card-image--disabled
+						img(src="http://i.istockimg.com/file_thumbview_approve/59137114/6/stock-photo-59137114-dublin-pinned-on-a-map-of-europe.jpg" ng-if="event.templateId == 1")
+						img(src="http://i.istockimg.com/file_thumbview_approve/56644040/6/stock-photo-56644040-touch-screen-financial-symbols.jpg" ng-if="event.templateId == 2 || event.templateId == 3")
+				.card-content
+					span.card-title.grey-text {{event.name}} – No data
+					p.grey-text Event ID: {{event.id}}
+					.tags
+						.chip(ng-repeat="tag in event.tags")
+							| {{tag.name}}

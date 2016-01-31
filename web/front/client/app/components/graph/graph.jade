@@ -1,0 +1,10 @@
+div
+	.ct-chart.ct-golden-section
+	div
+		.right-align(ng-show="vm.buy")
+			h5 Total data inputs: {{vm.eventData.length}}
+			h5 Price: {{vm.eventData.length * 15}} <i class="fa fa-gbp"></i>
+		.btn.waves-effect.waves-light.btn-large.right-align.btn-buy(ng-click="vm.buyData()" ng-show="vm.buy")
+			| <i class="fa fa-shopping-cart"></i>  Buy data
+
+

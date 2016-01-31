@@ -1,0 +1,101 @@
+.profile {
+	@include container;
+	padding: gutter(10);
+	.profile__devices {
+		z-index: 9999;
+	}
+
+	.profile__card {
+		@include span(12 of 12);
+	}
+
+	.profile__devices {
+		@include span(12 of 12)
+	}
+
+	.profile__events {
+		@include span(12 of 12);
+		
+		.card {
+			@include gallery(3 of 12);
+
+			.card-image img {
+				opacity: 0.8;
+				transition: all 300ms ease-in-out;
+				&:hover {
+					opacity: 1;
+					transform: scale(1.1,1.1) rotate(3deg);
+				}
+			}
+			p {
+				margin-bottom: 10px;	
+			}
+		}
+
+		.card-image--disabled { 
+			opacity: 0.3;
+			cursor: default;
+		}
+	}
+
+	.card-image img {
+		margin-top: -20%;
+	}
+
+	.btn--new-device {
+		width: 50%;
+		margin-left: 25%;
+		margin-bottom: 30px;
+	}
+	
+	.input-field input {
+		width: 80%;
+		margin-left: 10%;
+	}
+
+	.device-type-radio-buttons {
+		margin-bottom: 30px;
+		margin-left: 10%;
+		span {
+			margin-left: 10px;
+			font-size: 16px;
+		}
+	}
+
+	.collapsible-body {
+		background-color: white;
+	}
+
+	.input-field {
+		padding-top: 1rem;
+		margin-top: 0;
+	}
+
+	::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+		color: #424242;
+		font-size: 16px;
+	}
+	:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	   	color: #424242;
+	   	font-size: 16px;
+	   	opacity:  1;
+	}
+	.input-field input[type=search]:focus {
+		background-color: transparent !important;
+	}
+
+	.private-data {
+		margin-left: 10%;
+	}
+
+	label {
+		color: #424242;
+		font-size: 16px;
+	}
+
+	select { 
+		width: 80%;
+		margin-left: 10%;
+		border: 1px solid #B1B1B1;
+	}
+}

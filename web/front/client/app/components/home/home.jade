@@ -1,0 +1,110 @@
+.home 
+	.card-events
+		.card
+			div
+				a(ui-sref="event-graph({id:1})")
+					.card-image.waves-effect.waves-block.waves-light
+						img(src="./media/heart-rate.jpg")
+						.star
+						i.fa.fa-star
+				.card-content
+					span.card-title Heart Rate
+					.tags
+						.chip
+							| #heart
+						.chip
+							| #life
+						.chip
+							| #medical
+					.btn.btn--join-event(ng-click="vm.joinEvent(1, 'event-graph')" ng-show="vm.channelAvailable(1)")
+						i.fa.fa-user-plus 
+						span join 
+		.card
+			div
+				a(ui-sref="event-other({id:2})")
+					.card-image.waves-effect.waves-block.waves-light
+						img(src="./media/fridge.jpg")
+						.star
+						i.fa.fa-star
+				.card-content
+					span.card-title My lovely fridge
+					.tags
+						.chip
+							| #fridge
+						.chip
+							| #food
+					.btn.btn--join-event(ng-click="vm.joinEvent(2, 'event-other')" ng-show="vm.channelAvailable(2)")
+						i.fa.fa-user-plus 
+						span join 
+		.card
+			div
+				a(ui-sref="event-movements({id:3})")
+					.card-image.waves-effect.waves-block.waves-light
+						img(src="./media/movement.jpg")
+						.star
+						i.fa.fa-star
+				.card-content
+					span.card-title Hack Cambridge movement
+					.tags
+						.chip
+							| #movement
+						.chip
+							| #cambridge
+					.btn.btn--join-event(ng-click="vm.joinEvent(3, 'event-movements')" ng-show="vm.channelAvailable(3)")
+						i.fa.fa-user-plus 
+						span join 
+		.card
+			div
+				a(ui-sref="event-light({id:5})")
+					.card-image.waves-effect.waves-block.waves-light
+						img(src="./media/light.png")
+						.star
+						i.fa.fa-star
+				.card-content
+					span.card-title Light Android Sensor
+					.tags
+						.chip
+							| #light
+						.chip
+							| #android
+					.btn.btn--join-event(ng-click="vm.joinEvent(5, 'event-light')" ng-show="vm.channelAvailable(5)")
+						i.fa.fa-user-plus 
+						span join 
+		.card
+			div
+				a(ui-sref="event-map")
+					.card-image.waves-effect.waves-block.waves-light
+						img(src="./media/location.jpg")
+						.star
+						i.fa.fa-star
+				.card-content
+					span.card-title Tourist Locations
+					.tags
+						.chip
+							| #location
+						.chip
+							| #tourist
+						.chip
+							| #GPS
+					.btn.btn--join-event(ng-click="vm.joinEvent(4, 'event-map')" ng-show="vm.channelAvailable(4)")
+						i.fa.fa-user-plus 
+						span join 
+		.card
+			div
+				a(ui-sref="event-counter")
+					.card-image.waves-effect.waves-block.waves-light
+						img(src="./media/sadface.png")
+						.star
+						i.fa.fa-star
+				.card-content
+					span.card-title Mr. Wi-fi
+					.tags
+						.chip
+							| #unhappy
+						.chip
+							| #slowconnection
+						.chip
+							| #dying
+					.btn.btn--join-event
+						i.fa.fa-user-plus 
+						span join 

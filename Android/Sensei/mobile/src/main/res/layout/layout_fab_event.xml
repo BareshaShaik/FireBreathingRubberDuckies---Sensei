@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.github.clans.fab.FloatingActionMenu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fabMenu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom|end"
+    android:paddingBottom="@dimen/fab_margin"
+    android:paddingEnd="@dimen/fab_margin"
+    android:paddingStart="0dp"
+    fab:menu_backgroundColor="@android:color/transparent"
+    fab:menu_colorNormal="@color/colorPrimary"
+    fab:menu_colorPressed="@color/colorPrimaryLight"
+    fab:menu_icon="@drawable/ic_add"
+    fab:menu_labels_colorNormal="#444"
+    fab:menu_labels_colorPressed="#444"
+    fab:menu_labels_colorRipple="#444"
+    fab:menu_labels_ellipsize="end"
+    fab:menu_labels_showShadow="false"
+    fab:menu_labels_singleLine="true"
+    fab:menu_showShadow="true">
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/fabValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_add"
+        fab:fab_colorNormal="@color/colorAccent"
+        fab:fab_colorPressed="@color/colorAccentLight"
+        fab:fab_label="Value"
+        fab:fab_size="mini" />
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/fabInterval"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add"
+        fab:fab_colorNormal="@color/colorAccent"
+        fab:fab_colorPressed="@color/colorAccentLight"
+        fab:fab_label="Interval"
+        fab:fab_size="mini" />
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/fabManual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add"
+        fab:fab_colorNormal="@color/colorAccent"
+        fab:fab_colorPressed="@color/colorAccentLight"
+        fab:fab_label="Manual"
+        fab:fab_size="mini" />
+
+
+</com.github.clans.fab.FloatingActionMenu>
